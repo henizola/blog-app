@@ -1,9 +1,29 @@
 import styled from 'styled-components';
 
-import Post from '../../components/post/posts.component';
 export const HomePageContainer = styled.div`
 	width: 90%;
 	height: 100vh;
+`;
+
+export const SinglePost = styled.div`
+	grid-area: populars;
+	max-height: 72%;
+	border-bottom: 1px solid black;
+	overflow: hidden;
+`;
+export const Populars = styled.div`
+	grid-area: single-post;
+	max-height: 72%;
+	border-bottom: 1px solid black;
+`;
+export const ForYou = styled.div`
+	grid-area: for-you;
+	max-height: 72%;
+	border-bottom: 1px solid black;
+`;
+export const Home = styled.div`
+	height: 100vh;
+	width: 100%;
 	display: grid;
 	grid-template-columns: 40% 1fr 25%;
 	grid-template-areas: 'single-post populars for-you';
@@ -11,18 +31,6 @@ export const HomePageContainer = styled.div`
 	grid-gap: 10px;
 `;
 
-export const SinglePost = styled.div`
-	grid-area: populars;
-	height: 70%;
-	border-bottom: 1px solid black;
-`;
-export const Populars = styled.div`
-	grid-area: single-post;
-	height: 70%;
-	border-bottom: 1px solid black;
-`;
-export const ForYou = styled.div`
-	grid-area: for-you;
-	height: 70%;
-	border-bottom: 1px solid black;
+export const Body = styled.div`
+	width: 100%;
 `;

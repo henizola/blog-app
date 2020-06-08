@@ -4,16 +4,16 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
-import { UserProvider } from './context/user/user.context';
+import { PostProvider } from './context/post/post.context';
 ReactDOM.render(
-	<UserProvider>
+	<PostProvider>
 		<BrowserRouter>
 			{' '}
 			<React.StrictMode>
 				<App />
 			</React.StrictMode>
 		</BrowserRouter>
-	</UserProvider>,
+	</PostProvider>,
 	document.getElementById('root')
 );
 

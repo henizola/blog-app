@@ -11,7 +11,7 @@ import { ReactComponent as Like } from '../../assets/favorite_border-black-18dp.
 const Post = ({ post }) => {
 	return (
 		<PostContainer>
-			<CoverPicture src={post.posts.img} />
+			<CoverPicture src={post.posts.img} id='home' />
 			<Header>
 				<Title>{post.description}</Title>
 				<NameTag>by : {post.name}</NameTag>

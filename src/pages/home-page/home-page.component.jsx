@@ -4,25 +4,36 @@ import {
 	SinglePost,
 	Populars,
 	ForYou,
+	Home,
+	Body,
 } from './home-page.styles';
-import { UserContext } from '../../context/user/user.context';
+import { PostContext } from '../../context/post/post.context';
 import Post from '../../components/post/posts.component';
 import Recomended from '../../components/Recomended/recomended.components';
 const HomePage = () => {
-	const { users } = useContext(UserContext);
+	const { posts } = useContext(PostContext);
 	return (
 		<HomePageContainer>
-			<Populars>
-				<Recomended post={users[3]} />
-			</Populars>
-			<SinglePost name='single-post'>
-				<Post post={users[0]} />
-				<Post post={users[1]} />
-				<Post post={users[2]} />
-			</SinglePost>
-			<ForYou>
-				<Recomended post={users[4]} />
-			</ForYou>
+			<Home>
+				<Populars>
+					<Recomended post={posts[3]} />
+				</Populars>
+				<SinglePost id='single-post'>
+					{posts
+						.filter(
+							(element, index) => element.posts.likes.length < 4
+						)
+						.map((element, index) => (
+							<Post post={element} />
+						))}
+				</SinglePost>
+				<ForYou>
+					<Recomended post={posts[4]} />
+				</ForYou>
+			</Home>
+			<Body>
+				<h1 id='foryou'>body goes here</h1>
+			</Body>
 		</HomePageContainer>
 	);
 };
