@@ -1,7 +1,9 @@
 import { createContext } from 'react';
 
 export const ProfileContext = createContext({
-	hidden: true,
-	toggleHidden: () => {},
+	profileHidden: true,
+	toggleProfileHidden: () => {},
+	notificationHidden: true,
+	toggleNotificationHidden: () => {},
 });
 export default ProfileContext;

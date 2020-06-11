@@ -12,9 +12,12 @@ import CurrentUser from '../../context/current-user/user.context';
 
 import Search from '../search/search.component';
 
+import Notification from '../notification/notification.component';
 const User = () => {
-	const { hidden } = useContext(ProfileContext);
-	const { toggleHidden } = useContext(ProfileContext);
+	const { profileHidden } = useContext(ProfileContext);
+	const { toggleProfileHidden } = useContext(ProfileContext);
+	const { notificationHidden } = useContext(ProfileContext);
+	const { toggleNotificationHidden } = useContext(ProfileContext);
 	const UserData = useContext(CurrentUser);
 	return (
 		<UserProfileContainer>
@@ -22,16 +25,19 @@ const User = () => {
 			<Pages to='/bookmarks'>
 				<BookMark />
 			</Pages>
-			<Pages to='/notification'>
+			{console.log(notificationHidden)}
+			{console.log(toggleProfileHidden)}
+			{notificationHidden ? null : <Notification />}
+			<Pages onClick={toggleNotificationHidden}>
 				<Alert />
 			</Pages>
 			<CustomButton title={'Upgrade'} />
 			<ProfilePhoto
 				src={UserData.img}
 				alt='user'
-				onClick={toggleHidden}
+				onClick={toggleProfileHidden}
 			/>
-			{hidden ? null : <Profile />}
+			{profileHidden ? null : <Profile />}
 		</UserProfileContainer>
 	);
 };

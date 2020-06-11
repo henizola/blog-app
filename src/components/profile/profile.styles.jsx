@@ -4,13 +4,14 @@ export const Dropdown = styled.div`
 	width: 200px;
 	position: absolute;
 	max-height: 400px;
-	margin-top: 75px;
-	margin-left: 130px;
+	margin-top: 95px;
+	margin-left: 180px;
 	background: white;
 	border-radius: 5px;
 	display: flex;
 	flex-direction: column;
 	overflow: scroll;
+	box-shadow: 2px 2px 20px gray;
 `;
 
 export const DropdownContents = styled(Link)`

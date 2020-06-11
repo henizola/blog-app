@@ -11,8 +11,11 @@ import {
 import User from '../user/user.component';
 import ProfileContext from '../../context/profile/profile.context';
 const NavBar = () => {
-	const [hidden, setHidden] = useState(true);
-	const toggleHidden = () => setHidden(!hidden);
+	const [profileHidden, setProfileHidden] = useState(true);
+	const [notificationHidden, setNotificationHidden] = useState(true);
+	const toggleProfileHidden = () => setProfileHidden(!profileHidden);
+	const toggleNotificationHidden = () =>
+		setNotificationHidden(!notificationHidden);
 	return (
 		<NavContainer>
 			<Header>
@@ -20,7 +23,14 @@ const NavBar = () => {
 					<Logo to='/'>Medium</Logo>
 				</LogoContainer>
 				<UserContainer>
-					<ProfileContext.Provider value={{ hidden, toggleHidden }}>
+					<ProfileContext.Provider
+						value={{
+							profileHidden,
+							toggleProfileHidden,
+							notificationHidden,
+							toggleNotificationHidden,
+						}}
+					>
 						<User />
 					</ProfileContext.Provider>
 				</UserContainer>

@@ -8,6 +8,7 @@ import {
 import { PostContext } from '../../context/post/post.context';
 import Post from '../post/posts.component';
 import { ReactComponent as Saved } from '../../assets/bookmark-24px.svg';
+import { HorizontalLine } from '../../pages/book-marks/bookmarks.styles';
 const BlogList = () => {
 	const { posts } = useContext(PostContext);
 	return (
