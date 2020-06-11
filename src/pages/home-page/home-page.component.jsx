@@ -6,10 +6,12 @@ import {
 	ForYou,
 	Home,
 	Body,
+	HorizontalLine,
 } from './home-page.styles';
 import { PostContext } from '../../context/post/post.context';
 import Post from '../../components/post/posts.component';
 import Recomended from '../../components/Recomended/recomended.components';
+import BlogList from '../../components/blog-list/blog-list.component';
 const HomePage = () => {
 	const { posts } = useContext(PostContext);
 	return (
@@ -31,8 +33,9 @@ const HomePage = () => {
 					<Recomended post={posts[4]} />
 				</ForYou>
 			</Home>
+			<HorizontalLine />
 			<Body>
-				<h1 id='foryou'>body goes here</h1>
+				<BlogList id='#foryou' />
 			</Body>
 		</HomePageContainer>
 	);

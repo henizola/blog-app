@@ -8,18 +8,15 @@ export const HomePageContainer = styled.div`
 export const SinglePost = styled.div`
 	grid-area: populars;
 	max-height: 72%;
-	border-bottom: 1px solid black;
 	overflow: hidden;
 `;
 export const Populars = styled.div`
 	grid-area: single-post;
 	max-height: 72%;
-	border-bottom: 1px solid black;
 `;
 export const ForYou = styled.div`
 	grid-area: for-you;
 	max-height: 72%;
-	border-bottom: 1px solid black;
 `;
 export const Home = styled.div`
 	height: 100vh;
@@ -33,4 +30,10 @@ export const Home = styled.div`
 
 export const Body = styled.div`
 	width: 100%;
+	margin-top: 20px;
+`;
+
+export const HorizontalLine = styled.hr`
+	width: 90vw;
+	margin: auto;
 `;

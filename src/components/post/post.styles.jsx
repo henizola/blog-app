@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-
-export const PostContainer = styled.div`
+import { Link } from 'react-router-dom';
+export const PostContainer = styled(Link)`
 	width: 100%;
 	height: 150px;
 	overflow: hidden;
@@ -8,6 +8,7 @@ export const PostContainer = styled.div`
 	display: grid;
 	grid-template-columns: 100px 1fr;
 	cursor: pointer;
+	text-decoration: none;
 `;
 export const Title = styled.h4`
 	color: black;
@@ -27,9 +28,8 @@ export const Header = styled.div`
 export const NameTag = styled.span`
 	color: #000;
 `;
-export const Likes = styled.div`
-	display: flex;
-	justify-content: space-between;
-	width: 30px;
-	/* border: 1px solid black; */
+export const PostDescription = styled.span`
+	width: 70%;
+	margin-top: 0px;
+	color: black;
 `;

@@ -5,21 +5,24 @@ import {
 	CoverPicture,
 	Header,
 	NameTag,
-	Likes,
+	PostDescription,
 } from './post.styles';
-import { ReactComponent as Like } from '../../assets/favorite_border-black-18dp.svg';
 const Post = ({ post }) => {
 	return (
-		<PostContainer>
+		<PostContainer
+			to={{
+				pathname: '/read',
+				data: post,
+			}}
+		>
 			<CoverPicture src={post.posts.img} id='home' />
 			<Header>
 				<Title>{post.description}</Title>
 				<NameTag>by : {post.name}</NameTag>
-				<NameTag>posted : {post.published}</NameTag>
-				<Likes>
-					<Like />
-					<NameTag>{post.posts.likes.length}</NameTag>
-				</Likes>
+
+				<PostDescription>
+					{post.posts.length} min read {post.published}
+				</PostDescription>
 			</Header>
 		</PostContainer>
 	);
