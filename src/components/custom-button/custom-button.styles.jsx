@@ -13,4 +13,7 @@ export const Button = styled.button`
 		color: black;
 		border: 0.5px solid black;
 	}
+	&:focus {
+		outline: 0;
+	}
 `;

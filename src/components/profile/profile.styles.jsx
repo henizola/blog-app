@@ -3,13 +3,14 @@ import { Link } from 'react-router-dom';
 export const Dropdown = styled.div`
 	width: 200px;
 	position: absolute;
-
+	max-height: 400px;
 	margin-top: 75px;
 	margin-left: 130px;
 	background: white;
 	border-radius: 5px;
 	display: flex;
 	flex-direction: column;
+	overflow: scroll;
 `;
 
 export const DropdownContents = styled(Link)`

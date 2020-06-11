@@ -29,7 +29,7 @@ export const UserContainer = styled.div`
 	justify-content: space-between;
 	margin-top: 20px;
 	/* border: 1px solid black; */
-	width: 25%;
+	width: 50%;
 `;
 export const Header = styled.div`
 	max-width: 100%;
